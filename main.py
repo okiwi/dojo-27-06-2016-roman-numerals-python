@@ -6,7 +6,6 @@ def to_romans(number):
 
     for (arabic, roman_mapping) in mapping.items():
         occurences = number / arabic
-        if occurences > 0:
-            roman += roman_mapping * occurences
-            number -= arabic * occurences
+        roman += roman_mapping * occurences
+        number -= arabic * occurences
     return roman
